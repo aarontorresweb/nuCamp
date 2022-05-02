@@ -22,7 +22,7 @@ footer {
 .jumbotron {
     padding: 30px;
     background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
-    color: white;
+    color: #FFF;
 }
 
 .row-content {
@@ -31,7 +31,3 @@ footer {
     min-height: 200px;
 }
 
-.myClass{
-    font-size: 50px ;
-
-}
