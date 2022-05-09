@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"/>
     <link rel="stylesheet" href="css/styles.css"/>
 
-
     <title>NuCamp: A Better Way To Camp</title>
 </head>
 
@@ -31,6 +30,11 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                 <!-- Task 3 of week 2 Bootstrap assignment starts here. -->
+                <div class="col col-md-4 col-xl-2 mt-4">
+                    <a href="#reserveForm" class="btn btn-info btn-lg">Reserve Campsite</a>
+                </div>
+                <!-- Task 3 ends here. -->
             </div>
         </div>
     </header>
@@ -53,6 +57,7 @@
         </div>
     </nav>
 
+    <!-- Task 2 of week 2 Bootstrap assignment starts here. -->
     <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-sm4 order-sm-last col-md-3">
@@ -74,8 +79,13 @@
                 <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" >
+                </div>
             </div>
         </div>
 
@@ -94,6 +104,46 @@
             </div>
         </div>
     </div>
+
+    <!-- Start of Task 2 Form -->
+
+    <div class="row row-content">
+        <div class="col-sm-6 mx-auto">
+            <div class="card">
+                <h3 class="card-header bg-info text-white">
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="row">
+                                <label for="numCampers" class="col-sm-6">Number of Campers</label>
+                                <div class="col">
+                                    <select name="numCampers" id="numCampers">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="date">Date</label>
+                                <div class="col-sm-6">
+                                    <input type="date" id="date" name="date" placeholder="date"></input>
+                                </div>
+                            </div>
+                            <div class="col"> 
+                                <button type="submit" class="btn-primary">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task 2 ends here. :) -->
 
     <footer class="site-footer">
         <div class="container">
