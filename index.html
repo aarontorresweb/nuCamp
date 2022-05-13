@@ -30,11 +30,9 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                 <!-- Task 3 of week 2 Bootstrap assignment starts here. -->
                 <div class="col col-md-4 col-xl-2 mt-4">
-                    <a href="#reserveForm" class="btn btn-info btn-lg">Reserve Campsite</a>
+                    <a href="#reserveForm" role="button" class="btn btn-info btn-lg" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Or call us at <br><strong>555-555-5555</strong>">Reserve Campsite</a>
                 </div>
-                <!-- Task 3 ends here. -->
             </div>
         </div>
     </header>
@@ -57,7 +55,6 @@
         </div>
     </nav>
 
-    <!-- Task 2 of week 2 Bootstrap assignment starts here. -->
     <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-sm4 order-sm-last col-md-3">
@@ -105,8 +102,6 @@
         </div>
     </div>
 
-    <!-- Start of Task 2 Form -->
-
     <div class="row row-content">
         <div class="col-sm-6 mx-auto">
             <div class="card">
@@ -143,8 +138,6 @@
         </div>
     </div>
 
-    <!-- Task 2 ends here. :) -->
-
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -175,7 +168,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script>
+        $(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
 </body>
 
 </html>
