@@ -192,6 +192,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-small" id="carouselPause">
+                            <i class="fa fa-pause"></i>
+                        </button>
+                        <button class="btn btn-success btn-small" id="carouselPlay">
+                            <i class="fa fa-play"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -310,38 +318,20 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".carousel").carousel({interval: 2000});
+            $("#carouselPause").click(function(){
+                $(".carousel").carousel("pause");
+                console.log('Carousel paused.');
+            });
+            $("#carouselPlay").click(function(){
+                $(".carousel").carousel("cycle");
+                console.log('Carousel started.')
+            });
+        });
+    </script>
 </body>
 
 </html>
-
-
-<!--
-
-
-    id="reserveForm"
-
-
-                                <div class="row row-content">
-                                <label for="numCampers" class="col-sm-6">Number of Campers</label>
-                                <div class="col">
-                                    <select name="numCampers" id="numCampers">
-                                        <option>Select</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row row-content">
-                                <label for="date" class="col-form-label col-md-6">Date</label>
-                                <div class="col-sm-6">
-                                    <input type="date" id="date" name="date" placeholder="date"></input>
-                                </div>
-                            </div>
-                            <div class="col"> 
-                                <button type="submit" form="reserveForm"class="btn-primary">Search</button>
-                            </div>
--->
